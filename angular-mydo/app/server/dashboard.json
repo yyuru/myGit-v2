@@ -1,0 +1,25 @@
+[
+	{
+		"icon":"icon-cloud-upload",
+		"detail":"1700",
+		"name":"uploads",
+		"color":"#5d9cec",
+		"deepColor":"#2f80e7"
+	},
+	{
+		"icon":"icon-globe",
+		"detail":"700GB",
+		"name":"quota",
+		"color":"#7266ba",
+		"deepColor":"#564aa3"
+	},
+	{
+		"icon":"icon-bubbles",
+		"detail":"500",
+		"name":"reviews",
+		"color":"#37bc9b",
+		"deepColor":"#2b957a"
+	}
+	
+	
+]

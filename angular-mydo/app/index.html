@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="angel">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+   	<meta name="description" content="angular-backend">
+   	<meta name="keywords" content="app, responsive, angular, bootstrap, dashboard, admin">
+   	
+   	<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+   	<link rel="stylesheet" type="text/css" href="vendor/fontawesome/css/font-awesome.min.css">
+   	<link rel="stylesheet" type="text/css" href="vendor/simple-line-icons/css/simple-line-icons.css">
+   	<link rel="stylesheet" type="text/css" href="vendor/animate.css/animate.min.css">
+   	<link rel="stylesheet" type="text/css" href="css/app.css">
+	<title>Angel</title>
+	<style type="text/css">
+		.ng-cloak{
+			display: none;
+		}
+	</style>
+</head>
+<body class="ng-cloak" data-ng-controller="AppCtrl" data-ng-class="{'aside-collapse':app.layout.isCollapsed}">
+	<div ui-view='' class="wrapper">
+		
+	</div>
+	<script type="text/javascript" src="js/base.js"></script>
+	<script type="text/javascript" src="vendor/screenfull/dist/screenfull.js"></script>
+	<script type="text/javascript" src="js/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<div class="signUpBlock">
+	<div class="panel">
+		<div class="panel-heading text-center">
+			<a href="#">
+				<img src="img/logo.png" alt="">
+			</a>
+		</div>
+		<div class="panel-body">
+			<p class="text-center text-uppercase">
+				signup to get instant access
+			</p>
+			<form role='form' novalidate name="registerForm">
+				<div class="form-group has-feedback">
+					<label class="text-muted">Email address</label>
+					<input novalidate type="email" name="register_email" class="form-control" ng-model='register.email' required>
+					<span class="fa fa-envelope form-control-feedback text-muted">
+						
+					</span>
+					<span ng-show="registerForm.register_email.$dirty &amp;&amp; registerForm.register_email.$error.required" class="text-danger">
+						This field is required
+					</span>
+					<span ng-show="registerForm.register_email.$dirty &amp;&amp; registerForm.register_email.$error.email" class="text-danger">
+						This field must be a valid email address
+					</span>
+				</div>
+				<div class="form-group has-feedback">
+					<label class="text-muted">Password</label>
+					<input novalidate type="password" name="register_password"  ng-model="register.password" class="form-control" ng-maxlength='10' ng-minlength='6' ng-pattern="/^[a-zA-Z0-9]{6,10}$/" required>
+					<span class="fa fa-lock form-control-feedback text-muted">
+						
+					</span>
+					<span ng-show="registerForm.register_password.$dirty &amp;&amp; registerForm.register_password.$error.required" class="text-danger">
+						This field is required
+					</span>
+					<span ng-show="registerForm.register_password.$dirty&amp;&amp;registerForm.register_password.$error.pattern" class="text-danger">
+						Input should match 'a-zA-Z0-9' and 6-10 length
+					</span>
+				</div>
+				<div class="form-group has-feedback">
+					<label class="text-muted">Retype Password</label>
+					<input  type="password" name="register_RtPassword" ng-model='register.RtPassword' ui-validate="'$value==register.password'" ui-validate-watch="'password'" class="form-control" required>
+					<span class="fa fa-lock form-control-feedback text-muted">
+						
+					</span>
+					<span ng-show="registerForm.register_RtPassword.$dirty &amp;&amp;registerForm.register_RtPassword.$error.validator" class="text-danger">
+						Password does Not match
+					</span>
+					
+				</div>
+				<div class="clearfix">
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" novalidate name="register_agree" ng-model="register.agree" required>
+							<span class="fa fa-check" style="margin-left: -15px;margin-right:5px ">
+								
+							</span>
+							I agree with the
+							<a href="#">terms</a>
+						</label>
+						
+					</div> 
+					
+				</div>
+				<div ng-show="registerForm.register_agree.$dirty &amp;&amp; registerForm.register_agree.$error.required" class="text-danger">
+					You must agree the terms
+				</div>
+				<button ng-disabled="registerForm.$invalid" class="btn btn-block btn-primary">
+					Create Account
+				</button>
+				<p class="text-center">
+					Have an account?
+				</p>
+				<a class="btn btn-block btn-default" ng-href="#/page/login">
+					Sign-up
+				</a>
+			</form>
+		</div>
+	</div>
+	<div class="text-center" style="padding: 15px">
+		<span>
+			©2018-Angle
+		</span>
+		<br>
+		<span>
+			Angular Bootstrap Admin Template
+		</span>
+	</div>
+</div>

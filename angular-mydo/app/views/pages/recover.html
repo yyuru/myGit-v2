@@ -1,0 +1,43 @@
+<div class="recoverBlock">
+	<div class="panel">
+		<div class="panel-heading text-center">
+			<a href="#">
+				<img src="img/logo.png">
+			</a>
+		</div>
+		<div class="panel-body">
+			<p class="text-center text-uppercase">
+				password reset
+			</p>
+			<p class="text-center">
+				Fill with you mail to receive instructions on how to reset your password
+			</p>
+			<form role="form" name="recoverForm">
+				<div class="form-group has-feedback">
+					<label class="text-muted">
+						Email address
+					</label>
+					<input class="form-control" type="email" name="recover_email" ng-model='recover.email' placeholder="Enter email" required>
+					<span class="fa fa-envelope form-control-feedback">
+						
+					</span>
+					<span ng-show="recoverForm.recover_email.$dirty &amp;&amp; recoverForm.recover_email.$error.required" class="text-danger" >
+						This field is required
+					</span>
+					<span ng-show="recoverForm.recover_email.$dirty &amp;&amp; recoverForm.recover_email.$error.email" class="text-danger" >
+						THis field must be a valid email address
+					</span>
+					
+				</div>
+				<button class="btn btn-block btn-danger">
+						Reset
+					</button>
+			</form>
+		</div>
+	</div>
+	<div style="padding: 15px" class="text-center">
+		<span>© 2018 - Angle </span>
+		<br>
+		<span>Angular Bootstrap Admin Template</span>
+	</div>
+</div>

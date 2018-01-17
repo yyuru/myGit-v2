@@ -1,0 +1,111 @@
+<nav class="navbar topnavbar" role=navigation>
+				<div class="navbar-header">
+					<a href="#" class="navbar-brand">
+						<div class="navbar-logo">
+							<img src="img/logo.png" class="img-responsive">
+						</div>
+						<div class="navbar-logo-collapsed">
+							<img src="img/logo-single.png" class="img-responsive">
+						</div>
+					</a>
+				</div>
+				<div class="navbar-wrapper">
+					<ul class="nav navbar-nav">
+						<li>
+							<a href="#" ng-click="app.layout.isCollapsed = !app.layout.isCollapsed">
+								<em class="fa fa-navicon"></em>
+							</a>
+						</li>
+						<li>
+							<a href="#" ng-click="toggleUserBlock()">
+								<em class="icon-user"></em>
+							</a>
+						</li>
+						<li>
+							<a href="#">
+								<em class="icon-lock"></em>
+							</a>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li>
+							<a href="#" search-open='search-open'>
+								<em class="icon-magnifier"></em>
+							</a>
+						</li>
+						<li class="visible-lg">
+							<a href="#" toggle-fullscreen='toggle-fullscreen'>
+								<em class="fa fa-expand"></em>
+							</a>
+						</li>
+						<li dropdown="" class="dropdown dropdown-list">
+							<a dropdown-toggle="">
+								<em class="icon-bell"></em>
+								<div class="label label-danger">11</div>
+							</a>
+							<ul class="dropdown-menu animated flipInX">
+								<li>
+									<div class="list-group">
+										<a href="#" class="list-group-item">
+											<div class="media-box">
+												<div class="pull-left">
+													<em class="fa fa-twitter fa-2x text-info"></em>
+												</div>
+												<div class="media-box-body clearfix">
+													<p class="m-0">New Follower</p>
+													<p class="m-0 text-muted" >
+														<small>1 new follower</small>
+													</p>
+												</div>
+											</div>
+										</a>
+										<a href="#" class='list-group-item'>
+											<div class="media-box">
+												<div class="pull-left">
+													<em class="fa fa-envelope fa-2x text-warning"></em>
+												</div>
+												<div class="media-box-body clearfix">
+													<p class="m-0">New E-mails</p>
+													<p class="m-0 text-muted" >
+														<small>10 new e-mails</small>
+													</p>
+												</div>
+											</div>
+										</a>
+										<a href="#" class="list-group-item">
+											<div class="media-box">
+												<div class="pull-left">
+													<em class="fa fa-tasks fa-2x text-success"></em>
+												</div>
+												<div class="media-box-body clearfix">
+													<p class="m-0">Pending Tasks</p>
+													<p class="m-0 text-muted" >
+														<small>11 pending task</small>
+													</p>
+												</div>
+											</div>
+										</a>
+										<a href="#" class="list-group-item">
+											<small>More notification</small>
+										</a>
+									</div>
+								</li>
+							</ul>
+						</li>
+						<li>
+							<a href="#">
+								<em class="icon-notebook"></em>
+							</a>
+						</li>
+					</ul>
+					
+				</div>
+				<form class="navbar-form" role='search'>
+					<div class="form-group has-feedback">
+						<input type="text" name="" placeholder="Type and hit ENTER..." class="form-control">
+					</div>
+					<div class="fa fa-times form-control-feedback" search-dismiss='search-dismiss'>
+						
+					</div>
+				</form>
+			</nav>

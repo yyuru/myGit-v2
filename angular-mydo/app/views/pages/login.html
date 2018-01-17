@@ -1,0 +1,68 @@
+<div class="loginBlock">
+	<div class="panel">
+		<div class="panel-heading text-center">
+			<a href="#">
+				<img src="img/logo.png">
+			</a>
+		</div>
+		<div class="panel-body">
+			<p class="text-uppercase text-center">
+				sign in to continue
+			</p>
+			<form ng-submit="login()" name="loginForm" novalidate="">
+				<div class="form-group has-feedback">
+					<input class="form-control" novalidate="" type="email" name="account_email" placeholder="{{placeholder}}" ng-model='account.email' required>
+					<span class="fa fa-envelope form-control-feedback text-muted"></span>
+					<span ng-show="loginForm.account_email.$dirty &amp;&amp; loginForm.account_email.$error.required"  class="text-danger"> 
+						This field is required
+					</span>
+					<span ng-show="loginForm.account_email.$dirty &amp;&amp; loginForm.account_email.$error.email" class="text-danger">
+						This field must be a valid email address 
+					</span>
+
+				</div>
+				<div class="form-group has-feedback">
+					<input class="form-control" novalidate type="password" name="account_password" placeholder="Password" ng-model="account.passwprd" required>
+					<span class="fa fa-lock form-control-feedback text-muted"></span>
+					<span class="text-danger" ng-show="loginForm.account_password.$dirty &amp;&amp; loginForm.account_password.$error.required">
+						This field is required
+					</span>
+				</div>
+				<div class="clearfix">
+					<div class="checkbox pull-left">
+						<label>
+							<input type="checkbox" name="" onselectstart="return false">
+							<span class="fa fa-check" style="margin-left: -15px;margin-right: 5px">
+								
+							</span>
+							Remember Me
+						</label>
+					</div>
+					<div class="pull-right">
+						<a ng-href="#/page/recover" class="text-muted">
+							Forgot your password 
+						</a>
+					</div>
+					<button type="submit" class="btn btn-block btn-primary">
+						Login
+					</button>
+					<p class="text-center" style="padding-top: 15px">
+						Need to Signup?
+					</p>
+					<a ng-href="#/page/register" class="btn btn-block btn-default">
+						Register Now
+					</a>
+				</div>
+
+			</form>
+		</div>
+	</div>
+	<div class="text-center" style="padding: 15px">
+		<span>©</span>
+		<span>2018</span>
+		<span>-</span>
+		<span>Angle</span>
+		<br>
+		<span>Angular Bootstrap Admin Template</span>			
+	</div>
+</div>

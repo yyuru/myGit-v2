@@ -1,0 +1,45 @@
+<div class="aside-inner">
+				<nav class="sidebar" sidebar="">
+					<ul class="nav">
+						<li>
+							<div collapse='userBlockState'>
+								<div class="user-block" style="">
+									<div class="user-block-pic" style="">
+										<div>
+											<img width="60" height="60" class="img-circle img-thumbnail" src="{{user.picture}}">
+										</div>
+									</div>
+									<div class="user-block-info" style="">
+										<span class="user-block-name" style="color: #7D848F;">
+											Welcome {{user.name}}
+										</span>
+										<span class="user-block-role" style="color: #aaa;font-size: 12px;">
+											{{user.job}}
+										</span>
+									</div>
+								</div>
+							</div>
+						</li>
+						<li   ng-repeat="sidebarname in sideBarMenu" ng-class="getPropClass(sidebarname)" ng-init="pIndex=$index">
+							<span ng-if="sidebarname.heading">
+								{{sidebarname.text}}
+							</span>
+							<a ng-click="toggleSubnav(pIndex)" ng-if="!sidebarname.heading" href="#">
+								<em ng-if='sidebarname.icon' class="{{sidebarname.icon}}"></em>
+								<span>{{sidebarname.text}}</span>
+							</a>
+							<ul collapse='isCollapse(pIndex)' ng-init="addCollapse(pIndex)" ng-if="sidebarname.submenu" class="nav sidebar-subnav">
+								<li class="subnav-head">
+									{{sidebarname.text}}
+								</li>
+								<li ng-repeat="submenuName in sidebarname.submenu">
+									<a ui-sref="{{submenuName.sref}}">
+										<span>{{submenuName.text}}</span>
+									</a>
+									
+								</li>
+							</ul>
+						</li>
+					</ul>
+				</nav>
+			</div>
